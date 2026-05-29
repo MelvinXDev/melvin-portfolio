@@ -177,6 +177,7 @@ function MobileNav({ isScrolled }: { isScrolled: boolean }) {
               <a href="#about" onClick={() => setIsOpen(false)} className="hover:text-zinc-50 transition-colors py-1">About</a>
               <a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-zinc-50 transition-colors py-1">Projects</a>
               <a href="#experience" onClick={() => setIsOpen(false)} className="hover:text-zinc-50 transition-colors py-1">Experience</a>
+              <a href="#education" onClick={() => setIsOpen(false)} className="hover:text-zinc-50 transition-colors py-1">Education</a>
               <a href="#blogs" onClick={() => setIsOpen(false)} className="hover:text-zinc-50 transition-colors py-1">Blogs</a>
               <a href="#tools" onClick={() => setIsOpen(false)} className="hover:text-zinc-50 transition-colors py-1">Tools</a>
               <a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-zinc-50 transition-colors py-1">Contact</a>
@@ -212,6 +213,7 @@ export default function Page() {
           <a href="#about" className="text-zinc-50 hover:opacity-80 transition-opacity">About</a>
           <a href="#projects" className="hover:text-zinc-50 transition-colors">Projects</a>
           <a href="#experience" className="hover:text-zinc-50 transition-colors">Experience</a>
+          <a href="#education" className="hover:text-zinc-50 transition-colors">Education</a>
           <a href="#blogs" className="hover:text-zinc-50 transition-colors">Blogs</a>
           <a href="#tools" className="hover:text-zinc-50 transition-colors">Tools</a>
           <a href="#contact" className="hover:text-zinc-50 transition-colors">Contact</a>
@@ -230,6 +232,7 @@ export default function Page() {
           <a href="#about" className="text-zinc-50 hover:opacity-80 transition-colors">About</a>
           <a href="#projects" className="hover:text-zinc-50 transition-colors">Projects</a>
           <a href="#experience" className="hover:text-zinc-50 transition-colors">Experience</a>
+          <a href="#education" className="hover:text-zinc-50 transition-colors">Education</a>
           <a href="#blogs" className="hover:text-zinc-50 transition-colors">Blogs</a>
           <a href="#tools" className="hover:text-zinc-50 transition-colors">Tools</a>
           <a href="#contact" className="hover:text-zinc-50 transition-colors">Contact</a>
@@ -321,7 +324,34 @@ export default function Page() {
         </div>
       </header>
 
-      {/* Projects Bento Grid (Moved before Experience) */}
+      {/* My Journey Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="mb-24 scroll-mt-20"
+      >
+        <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">01 // My Journey</h3>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <div className="md:col-span-4 text-xs font-mono text-emerald-500/80 uppercase tracking-wider sticky top-28">
+            The narrative version of my software engineering adventure.
+          </div>
+          <div className="md:col-span-8 space-y-6 text-zinc-400 text-sm leading-relaxed font-light max-w-2xl">
+            <p>
+              My journey into software engineering started back in 2017 at Code Club Nigeria, where I wrote my very first lines of HTML. Throughout secondary school, I stayed close to tech, diving into IT fundamentals through the Cisco Networking Academy.
+            </p>
+            <p>
+              I took a gap year after graduation to fully immerse myself in code, completing an intensive bootcamp that solidified my foundation in JavaScript, React, and Tailwind CSS. By 2025, I landed my first major role at Brandmind, where I led a team of four to build an AI-powered psychometric testing platform. Managing a product manager, a designer, and a co-developer taught me how to ship real products under pressure.
+            </p>
+            <p>
+              Today, I'm pursuing my Software Engineering degree while concurrently studying Computer Science, and I serve as an active contributor in my local GDSC chapter. Whether I'm wiring up an Arduino security system in C++, or building AI-integrated e-commerce platforms in Next.js, my goal is always the same: building clean, scalable software that solves actual problems.
+            </p>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Projects Bento Grid */}
       <motion.section
         id="projects"
         initial={{ opacity: 0, y: 20 }}
@@ -330,69 +360,97 @@ export default function Page() {
         transition={{ duration: 0.8 }}
         className="mb-24 pt-10 scroll-mt-20"
       >
-        <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">01 // Projects</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-12 auto-rows-[minmax(180px,auto)] lg:grid-rows-2 gap-4 flex-grow">
+        <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">02 // Projects</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-12 auto-rows-[minmax(180px,auto)] gap-4 flex-grow">
 
-          {/* Project 1: Anchor */}
+          {/* Project 1: Cura+ */}
           <div className="lg:col-span-7 lg:row-span-2 group border border-zinc-800 hover:border-zinc-700 bg-zinc-900/20 p-8 flex flex-col justify-between transition-all duration-300">
             <div>
               <div className="flex justify-between items-start mb-6">
-                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest">Infrastructure</span>
+                <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest">AI Healthcare Platform</span>
                 <ExternalLink className="w-5 h-5 text-zinc-700 group-hover:text-zinc-400 transition-colors" />
               </div>
-              <h3 className="text-3xl sm:text-4xl font-heading font-bold tracking-tighter mb-2 text-zinc-50">Cura+ Health Platform</h3>
-              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed max-w-sm font-light mb-8">
-                Fully deployed Next.js web application with a secure Firebase Auth infrastructure, real-time Firestore database integration, and a sleek responsive UI.
+              <h3 className="text-3xl sm:text-4xl font-heading font-bold tracking-tighter mb-2 text-zinc-50">Cura+</h3>
+              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed font-light mb-8 max-w-md">
+                Developed a Next.js MVP that utilizes AI to scan user uploaded medical prescriptions, cross-reference pharmacy inventory, and generate educational summaries of the prescribed medications.
               </p>
             </div>
             <div className="flex gap-2 flex-wrap">
               <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Next.js</span>
-              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Firebase</span>
-              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Tailwind</span>
+              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">AI (LLM)</span>
+              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Firebase Auth</span>
+              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Firestore</span>
             </div>
           </div>
 
-          {/* Project 2: Utility */}
+          {/* Project 2: AI Real Estate Hub */}
           <div className="lg:col-span-5 lg:row-span-1 group border border-zinc-800 hover:border-zinc-700 bg-zinc-900/20 p-6 flex flex-col justify-between transition-all duration-300">
             <div className="flex justify-between items-start">
-              <div className="max-w-[200px] mb-4 sm:mb-0">
-                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">Tooling</span>
-                <h3 className="text-xl font-heading font-bold tracking-tighter mb-1 text-zinc-50">CampusVault</h3>
-                <p className="text-zinc-500 text-[10px] sm:text-xs leading-snug">High-speed academic repository and digital infrastructure for university ecosystems.</p>
+              <div className="max-w-[320px] mb-4 sm:mb-0">
+                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">AI Real Estate Hub</span>
+                <h3 className="text-xl font-heading font-bold tracking-tighter mb-1 text-zinc-50">AI Property Portal</h3>
+                <p className="text-zinc-500 text-[10px] sm:text-xs leading-snug">
+                  Engineered a responsive property listing website utilizing React/Next.js. Integrated an AI text-refinement tool to format description summaries with WhatsApp and Email routing.
+                </p>
               </div>
               <div className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 border border-zinc-800 rounded-full flex items-center justify-center group-hover:border-zinc-600 transition-colors">
-                <div className="w-1.5 h-1.5 bg-zinc-500 rounded-full animate-pulse"></div>
+                <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>
               </div>
             </div>
             <div className="flex gap-2 flex-wrap mt-4 sm:mt-0">
-              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">TypeScript</span>
-              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">PostgreSQL</span>
+              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">React</span>
+              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Next.js</span>
+              <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">AI Refinement</span>
             </div>
           </div>
 
-          {/* Project 3: Creative */}
+          {/* Project 3: Ubani */}
           <div className="lg:col-span-5 lg:row-span-1 group border border-zinc-800 hover:border-zinc-700 bg-zinc-900/20 p-6 flex flex-col justify-between transition-all duration-300">
             <div className="flex justify-between items-start mb-4 lg:mb-0">
               <div>
-                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">Audio</span>
+                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">Real Estate Startup</span>
                 <h3 className="text-xl font-heading font-bold tracking-tighter text-zinc-50 flex items-center gap-2">
-                  Voidcore <ExternalLink className="w-4 h-4 text-zinc-700 group-hover:text-zinc-400 opacity-0 group-hover:opacity-100 transition-all" />
+                  Ubani <span className="text-[9px] font-mono px-1.5 py-0.5 border border-amber-500/30 text-amber-500/80 rounded bg-amber-500/5 normal-case font-normal">Architecture Only</span>
                 </h3>
+                <p className="text-zinc-500 text-[10px] sm:text-xs leading-snug mt-2">
+                  Designed and developed the architecture for a comprehensive real estate platform, solidifying advanced state management and React fundamentals.
+                </p>
               </div>
             </div>
             <div className="flex items-end justify-between mt-auto">
               <div className="flex gap-2">
-                <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase hidden sm:inline-block">Web Audio</span>
+                <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">State Management</span>
+                <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">System Design</span>
               </div>
-              <div className="flex items-end gap-3">
-                <div className="flex gap-0.5 h-6 items-end group-hover:gap-1 transition-all">
-                  <div className="w-1 h-3 bg-zinc-700 animate-[pulse_1s_ease-in-out_infinite_alternate]"></div>
-                  <div className="w-1 h-5 bg-zinc-600 animate-[pulse_1.2s_ease-in-out_infinite_alternate]"></div>
-                  <div className="w-1 h-2 bg-zinc-700 animate-[pulse_0.8s_ease-in-out_infinite_alternate]"></div>
-                  <div className="w-1 h-4 bg-zinc-500 animate-[pulse_1.5s_ease-in-out_infinite_alternate]"></div>
-                  <div className="w-1 h-6 bg-zinc-400 animate-[pulse_1.1s_ease-in-out_infinite_alternate]"></div>
-                </div>
-                <span className="text-[10px] font-mono text-zinc-500 uppercase">Live Player</span>
+              <span className="text-[10px] font-mono text-zinc-600 uppercase italic">Blueprint</span>
+            </div>
+          </div>
+
+          {/* Project 4: Smart Door Security */}
+          <div className="lg:col-span-12 lg:row-span-1 group border border-zinc-800 hover:border-zinc-700 bg-zinc-900/20 p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center transition-all duration-300 gap-6">
+            <div className="flex-grow max-w-3xl">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest">Hardware / IoT Security</span>
+                <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping"></span>
+              </div>
+              <h3 className="text-2xl font-heading font-bold tracking-tighter mb-2 text-zinc-50">Smart Door Security System</h3>
+              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed font-light">
+                Built a physical hardware security project using C++ and an Arduino microcontroller. Programmed logic to monitor door status and trigger scheduled alarms for unauthorized access during restricted hours.
+              </p>
+            </div>
+            <div className="flex flex-col items-start sm:items-end justify-between h-full gap-4 shrink-0">
+              <div className="flex gap-0.5 h-6 items-end group-hover:gap-1 transition-all">
+                <div className="w-1.5 h-3 bg-red-950/80 group-hover:bg-red-500 transition-colors"></div>
+                <div className="w-1.5 h-5 bg-red-900/60 group-hover:bg-red-500 transition-colors"></div>
+                <div className="w-1.5 h-2 bg-red-950/80 group-hover:bg-red-500 transition-colors"></div>
+                <div className="w-1.5 h-4 bg-red-800/80 group-hover:bg-red-500 transition-colors animate-pulse"></div>
+                <div className="w-1.5 h-6 bg-red-700/80 group-hover:bg-red-500 transition-colors"></div>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">C++</span>
+                <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Arduino</span>
+                <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">Microcontroller</span>
+                <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">IoT</span>
               </div>
             </div>
           </div>
@@ -409,18 +467,116 @@ export default function Page() {
         id="experience"
         className="mb-24 scroll-mt-20"
       >
-        <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">02 // Experience</h3>
+        <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">03 // Experience</h3>
         <div className="space-y-12 pl-4 sm:pl-6 border-l border-zinc-900 ml-2">
 
+          {/* Brandmind */}
           <div className="relative group">
             <div className="absolute -left-[22px] sm:-left-[30px] top-[9px] w-3 h-3 bg-zinc-700 group-hover:bg-zinc-50 rounded-full outline outline-4 outline-zinc-950 transition-colors"></div>
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-              <h4 className="text-xl sm:text-2xl font-heading font-bold text-zinc-50 tracking-tight">Software Engineer</h4>
-              <span className="text-[10px] font-mono text-zinc-500 md:mt-0 uppercase tracking-widest">Mar 2024 - Present</span>
+              <h4 className="text-xl sm:text-2xl font-heading font-bold text-zinc-50 tracking-tight">Software Engineer & Team Lead</h4>
+              <span className="text-[10px] font-mono text-zinc-500 md:mt-0 uppercase tracking-widest">2025 – Jan 2026</span>
             </div>
-            <div className="text-xs text-emerald-500/80 font-mono mb-4 uppercase tracking-wider">kay.ai</div>
-            <p className="text-sm text-zinc-400 leading-relaxed font-light max-w-2xl">
-              Building high-performance interfaces and scalable systems. Leading full-stack engineering efforts to conceptualize, construct, and optimize core web products from the ground up.
+            <div className="text-xs text-emerald-500/80 font-mono mb-4 uppercase tracking-wider">Brandmind</div>
+            <ul className="text-sm text-zinc-400 leading-relaxed font-light max-w-2xl list-disc list-outside pl-4 space-y-2">
+              <li>Architected and developed an AI-powered psychometric testing platform designed to assess behavioral patterns based on dynamic user inputs.</li>
+              <li>Led a cross-functional product team of 4 (including a Product Manager, UI/UX Designer, and Co-developer) to successfully deliver the MVP, earning direct commendation from company leadership.</li>
+              <li>Managed the integration of artificial intelligence tools to process and refine user assessment data.</li>
+            </ul>
+          </div>
+
+          {/* GDSC */}
+          <div className="relative group">
+            <div className="absolute -left-[22px] sm:-left-[30px] top-[9px] w-3 h-3 bg-zinc-700 group-hover:bg-zinc-50 rounded-full outline outline-4 outline-zinc-950 transition-colors"></div>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+              <h4 className="text-xl sm:text-2xl font-heading font-bold text-zinc-50 tracking-tight">Technical Contributor</h4>
+              <span className="text-[10px] font-mono text-zinc-500 md:mt-0 uppercase tracking-widest">100 Level – Present</span>
+            </div>
+            <div className="text-xs text-emerald-500/80 font-mono mb-4 uppercase tracking-wider">Google Developer Student Clubs (GDSC) – Lead City University</div>
+            <ul className="text-sm text-zinc-400 leading-relaxed font-light max-w-2xl list-disc list-outside pl-4 space-y-2">
+              <li>Actively collaborated with peers to build technical projects and explore artificial intelligence implementations.</li>
+              <li>Participated in software development workshops, reinforcing core programming principles and modern framework architecture.</li>
+            </ul>
+          </div>
+
+          {/* Course Rep */}
+          <div className="relative group">
+            <div className="absolute -left-[22px] sm:-left-[30px] top-[9px] w-3 h-3 bg-zinc-700 group-hover:bg-zinc-50 rounded-full outline outline-4 outline-zinc-950 transition-colors"></div>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+              <h4 className="text-xl sm:text-2xl font-heading font-bold text-zinc-50 tracking-tight">Course Representative</h4>
+              <span className="text-[10px] font-mono text-zinc-500 md:mt-0 uppercase tracking-widest">100 Level</span>
+            </div>
+            <div className="text-xs text-emerald-500/80 font-mono mb-4 uppercase tracking-wider">Lead City University Faculty of Software Engineering</div>
+            <ul className="text-sm text-zinc-400 leading-relaxed font-light max-w-2xl list-disc list-outside pl-4 space-y-2">
+              <li>Acted as the primary liaison between the university faculty and the Software Engineering student body.</li>
+              <li>Coordinated schedules, managed academic resources, and advocated for student needs within the department.</li>
+            </ul>
+          </div>
+
+        </div>
+      </motion.section>
+
+      {/* Education Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        id="education"
+        className="mb-24 scroll-mt-20"
+      >
+        <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">04 // Education</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pl-2">
+          
+          {/* Lead City University */}
+          <div className="border border-zinc-900 bg-zinc-950/30 p-6 rounded-xl relative group hover:border-zinc-800 transition-all">
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-[10px] font-mono text-emerald-500/80 uppercase tracking-widest">University Degree</span>
+              <span className="text-[10px] font-mono text-zinc-500">Currently in 200 Level</span>
+            </div>
+            <h4 className="text-lg font-heading font-bold text-zinc-50 mb-1">Bachelor of Science in Software Engineering</h4>
+            <p className="text-xs text-zinc-400 font-mono mb-3">Lead City University</p>
+            <p className="text-xs text-zinc-500 font-light leading-relaxed">
+              Pursuing a deep theoretical and practical foundation in software systems, algorithmic complexity, and software development methodologies.
+            </p>
+          </div>
+
+          {/* University of the People */}
+          <div className="border border-zinc-900 bg-zinc-950/30 p-6 rounded-xl relative group hover:border-zinc-800 transition-all">
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-[10px] font-mono text-emerald-500/80 uppercase tracking-widest">Asynchronous Degree</span>
+              <span className="text-[10px] font-mono text-zinc-500">Concurrent Studies</span>
+            </div>
+            <h4 className="text-lg font-heading font-bold text-zinc-50 mb-1">Associate of Science in Computer Science</h4>
+            <p className="text-xs text-zinc-400 font-mono mb-3">University of the People</p>
+            <p className="text-xs text-zinc-500 font-light leading-relaxed">
+              Engaging in self-paced academic coursework covering software design, databases, operating systems, and discrete mathematics.
+            </p>
+          </div>
+
+          {/* Web Development Bootcamp */}
+          <div className="border border-zinc-900 bg-zinc-950/30 p-6 rounded-xl relative group hover:border-zinc-800 transition-all">
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-[10px] font-mono text-emerald-500/80 uppercase tracking-widest">Bootcamp</span>
+              <span className="text-[10px] font-mono text-zinc-500">3-Month Immersive</span>
+            </div>
+            <h4 className="text-lg font-heading font-bold text-zinc-50 mb-1">Intensive Web Development</h4>
+            <p className="text-xs text-zinc-400 font-mono mb-3">Full-Stack Immersive Program</p>
+            <p className="text-xs text-zinc-500 font-light leading-relaxed">
+              Completed an intensive hands-on curriculum focusing on JavaScript, HTML, CSS, React, and Tailwind CSS, building responsive and interactive web applications.
+            </p>
+          </div>
+
+          {/* Cisco Networking Academy */}
+          <div className="border border-zinc-900 bg-zinc-950/30 p-6 rounded-xl relative group hover:border-zinc-800 transition-all">
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-[10px] font-mono text-emerald-500/80 uppercase tracking-widest">Academy Certificate</span>
+              <span className="text-[10px] font-mono text-zinc-500">Secondary School</span>
+            </div>
+            <h4 className="text-lg font-heading font-bold text-zinc-50 mb-1">Foundational IT & Network Infrastructure</h4>
+            <p className="text-xs text-zinc-400 font-mono mb-3">Cisco Networking Academy</p>
+            <p className="text-xs text-zinc-500 font-light leading-relaxed">
+              Gained hands-on exposure to network architecture, routing and switching principles, hardware systems, and foundational IT operations.
             </p>
           </div>
 
@@ -439,7 +595,7 @@ export default function Page() {
           id="blogs"
           className="scroll-mt-20"
         >
-          <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-8 pb-4 border-b border-zinc-900 inline-block pr-10">03 // Blogs & Notes</h3>
+          <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-8 pb-4 border-b border-zinc-900 inline-block pr-10">05 // Blogs & Notes</h3>
           <div className="space-y-10">
             <a href="#" className="block group">
               <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">Apr 24, 2026</span>
@@ -463,7 +619,7 @@ export default function Page() {
           id="tools"
           className="scroll-mt-20"
         >
-          <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-8 pb-4 border-b border-zinc-900 inline-block pr-10">04 // Tools & Tech</h3>
+          <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-8 pb-4 border-b border-zinc-900 inline-block pr-10">06 // Tools & Tech</h3>
           <div className="flex flex-wrap gap-3">
             <span className="px-4 py-2 bg-zinc-900/50 border border-zinc-800 text-xs font-mono text-zinc-300 rounded-sm">TypeScript</span>
             <span className="px-4 py-2 bg-zinc-900/50 border border-zinc-800 text-xs font-mono text-zinc-300 rounded-sm">React (Next.js)</span>
