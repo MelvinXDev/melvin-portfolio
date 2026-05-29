@@ -491,7 +491,7 @@ export default function Page() {
             </div>
             <div className="text-xs text-emerald-500/80 font-mono mb-4 uppercase tracking-wider">Brandmind</div>
             <ul className="text-sm text-zinc-400 leading-relaxed font-light max-w-2xl list-disc list-outside pl-4 space-y-2">
-              <li>Architected and developed an AI-powered psychometric testing platform designed to assess behavioral patterns based on dynamic user inputs.</li>
+              <li>Architected and developed an AI-powered psychometric testing platform for a Swiss-based psychometric company, designed to assess behavioral patterns based on dynamic user inputs.</li>
               <li>Led a cross-functional product team of 4 (including a Product Manager, UI/UX Designer, and Co-developer) to successfully deliver the MVP, earning direct commendation from company leadership.</li>
               <li>Managed the integration of artificial intelligence tools to process and refine user assessment data.</li>
             </ul>
@@ -694,7 +694,7 @@ export default function Page() {
                     placeholder="Hey Melvin..."
                     className="bg-zinc-950 border border-zinc-800 text-zinc-300 text-sm font-mono px-5 py-3 rounded-l-lg w-full md:w-80 focus:outline-none focus:border-zinc-500 transition-colors placeholder:text-zinc-700"
                   />
-                  <button 
+                  <button
                     type="submit"
                     className="bg-zinc-50 text-zinc-950 px-5 py-3 rounded-r-lg hover:bg-zinc-300 transition-colors flex items-center justify-center font-medium"
                   >
