@@ -438,7 +438,7 @@ export default function Page() {
                 Built a physical hardware security project using C++ and an Arduino microcontroller. Programmed logic to monitor door status and trigger scheduled alarms for unauthorized access during restricted hours.
               </p>
             </div>
-            <div className="flex flex-col items-start sm:items-end justify-between h-full gap-4 shrink-0">
+            <div className="flex flex-col items-start sm:items-end justify-between sm:h-full gap-4 shrink-0">
               <div className="flex gap-0.5 h-6 items-end group-hover:gap-1 transition-all">
                 <div className="w-1.5 h-3 bg-red-950/80 group-hover:bg-red-500 transition-colors"></div>
                 <div className="w-1.5 h-5 bg-red-900/60 group-hover:bg-red-500 transition-colors"></div>
