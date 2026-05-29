@@ -334,7 +334,7 @@ export default function Page() {
       >
         <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">01 // My Journey</h3>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          <div className="md:col-span-4 text-xs font-mono text-emerald-500/80 uppercase tracking-wider sticky top-28">
+          <div className="md:col-span-4 text-xs font-mono text-emerald-500/80 uppercase tracking-wider md:sticky md:top-28">
             The narrative version of my software engineering adventure.
           </div>
           <div className="md:col-span-8 space-y-6 text-zinc-400 text-sm leading-relaxed font-light max-w-2xl">
