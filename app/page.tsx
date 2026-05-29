@@ -657,6 +657,16 @@ export default function Page() {
           <div>
             <h4 className="text-xl font-heading font-semibold text-zinc-50">Start a conversation</h4>
             <p className="text-sm text-zinc-500 mt-2 font-light">Interested in working together? Shoot me a quick message.</p>
+            <div className="flex flex-wrap gap-4 mt-4">
+              <a href="https://wa.me/2348066300182" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[10px] font-mono text-zinc-400 hover:text-emerald-400 transition-colors bg-zinc-950/40 border border-zinc-900 px-3 py-1.5 rounded-full hover:border-emerald-500/30 group" title="Chat on WhatsApp">
+                <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-[pulse_1.5s_infinite]"></span>
+                WhatsApp: +234 806 630 0182
+              </a>
+              <a href="https://discord.com/users/melvinxdev" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[10px] font-mono text-zinc-400 hover:text-indigo-400 transition-colors bg-zinc-950/40 border border-zinc-900 px-3 py-1.5 rounded-full hover:border-indigo-500/30 group" title="Message on Discord">
+                <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-[pulse_1.5s_infinite]"></span>
+                Discord: melvinxdev
+              </a>
+            </div>
           </div>
           <div className="flex w-full md:w-auto relative group">
             <input
@@ -683,7 +693,7 @@ export default function Page() {
         <div className="flex gap-6">
           <a href="https://github.com/MelvinXDev" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors">GitHub</a>
           <a href="https://www.linkedin.com/in/melvin-chinedu-70927328a/" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors">LinkedIn</a>
-          <a href="mailto:hello@example.com" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors underline underline-offset-4">Email</a>
+          <a href="mailto:melvinlefthanded@gmail.com" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors underline underline-offset-4">Email</a>
         </div>
       </motion.footer>
     </div>
