@@ -368,9 +368,15 @@ export default function Page() {
             <div>
               <div className="flex justify-between items-start mb-6">
                 <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest">AI Healthcare Platform</span>
-                <ExternalLink className="w-5 h-5 text-zinc-700 group-hover:text-zinc-400 transition-colors" />
+                <a href="https://cura-online-pharmacy-system.vercel.app/" target="_blank" rel="noreferrer" title="View Cura+ live platform">
+                  <ExternalLink className="w-5 h-5 text-zinc-700 group-hover:text-zinc-400 transition-colors" />
+                </a>
               </div>
-              <h3 className="text-3xl sm:text-4xl font-heading font-bold tracking-tighter mb-2 text-zinc-50">Cura+</h3>
+              <h3 className="text-3xl sm:text-4xl font-heading font-bold tracking-tighter mb-2 text-zinc-50">
+                <a href="https://cura-online-pharmacy-system.vercel.app/" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+                  Cura+
+                </a>
+              </h3>
               <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed font-light mb-8 max-w-md">
                 Developed a Next.js MVP that utilizes AI to scan user uploaded medical prescriptions, cross-reference pharmacy inventory, and generate educational summaries of the prescribed medications.
               </p>
@@ -388,14 +394,18 @@ export default function Page() {
             <div className="flex justify-between items-start">
               <div className="max-w-[320px] mb-4 sm:mb-0">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">AI Real Estate Hub</span>
-                <h3 className="text-xl font-heading font-bold tracking-tighter mb-1 text-zinc-50">AI Property Portal</h3>
+                <h3 className="text-xl font-heading font-bold tracking-tighter mb-1 text-zinc-50">
+                  <a href="https://berrylinproperties.com/" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+                    AI Property Portal
+                  </a>
+                </h3>
                 <p className="text-zinc-500 text-[10px] sm:text-xs leading-snug">
                   Engineered a responsive property listing website utilizing React/Next.js. Integrated an AI text-refinement tool to format description summaries with WhatsApp and Email routing.
                 </p>
               </div>
-              <div className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 border border-zinc-800 rounded-full flex items-center justify-center group-hover:border-zinc-600 transition-colors">
-                <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>
-              </div>
+              <a href="https://berrylinproperties.com/" target="_blank" rel="noreferrer" className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 border border-zinc-800 rounded-full flex items-center justify-center hover:border-emerald-500 hover:bg-emerald-500/10 transition-colors group/link" title="View live property portal">
+                <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-zinc-300 group-hover/link:text-emerald-400 transition-colors" />
+              </a>
             </div>
             <div className="flex gap-2 flex-wrap mt-4 sm:mt-0">
               <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">React</span>
