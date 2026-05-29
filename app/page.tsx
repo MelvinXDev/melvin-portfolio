@@ -272,19 +272,19 @@ export default function Page() {
               className="pt-8 border-t border-zinc-900/80 flex flex-wrap items-center gap-4"
             >
               <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mr-2">Connect</span>
-              <a href="#" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="X (Twitter)">
+              <a href="https://x.com/MelvinXDev" target="_blank" rel="noreferrer" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="X (Twitter)">
                 <Twitter className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/melvin-chinedu-70927328a/" target="_blank" rel="noreferrer" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="LinkedIn">
                 <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="GitHub">
+              <a href="https://github.com/MelvinXDev" target="_blank" rel="noreferrer" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="GitHub">
                 <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
               <a href="#" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="Medium">
                 <PenTool className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="Instagram">
+              <a href="https://www.instagram.com/melvinxdev/" target="_blank" rel="noreferrer" className="p-2.5 border border-zinc-900 bg-zinc-950 rounded-full text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 hover:bg-zinc-900 transition-all group" title="Instagram">
                 <Instagram className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
             </motion.div>
@@ -671,8 +671,8 @@ export default function Page() {
         className="flex flex-col sm:flex-row justify-center items-center pt-8 border-t border-zinc-900 gap-4 scroll-mt-20 mb-6 w-full"
       >
         <div className="flex gap-6">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors">LinkedIn</a>
+          <a href="https://github.com/MelvinXDev" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/melvin-chinedu-70927328a/" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors">LinkedIn</a>
           <a href="mailto:hello@example.com" className="text-[10px] font-mono text-zinc-400 hover:text-zinc-50 uppercase transition-colors underline underline-offset-4">Email</a>
         </div>
       </motion.footer>
