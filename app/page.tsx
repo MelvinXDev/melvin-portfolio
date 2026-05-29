@@ -395,7 +395,7 @@ export default function Page() {
           <div className="lg:col-span-5 lg:row-span-1 group border border-zinc-800 hover:border-zinc-700 bg-zinc-900/20 p-6 flex flex-col justify-between transition-all duration-300">
             <div className="flex justify-between items-start">
               <div className="max-w-[320px] mb-4 sm:mb-0">
-                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">AI Real Estate Hub</span>
+                <span className="text-[10px] font-mono text-red-500 uppercase tracking-widest block mb-2">AI Real Estate Hub</span>
                 <h3 className="text-xl font-heading font-bold tracking-tighter mb-1 text-zinc-50">
                   <a href="https://berrylinproperties.com/" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
                     AI Property Portal
@@ -420,9 +420,9 @@ export default function Page() {
           <div className="lg:col-span-5 lg:row-span-1 group border border-zinc-800 hover:border-zinc-700 bg-zinc-900/20 p-6 flex flex-col justify-between transition-all duration-300">
             <div className="flex justify-between items-start mb-4 lg:mb-0">
               <div>
-                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest block mb-2">Real Estate Startup</span>
+                <span className="text-[10px] font-mono text-blue-500 uppercase tracking-widest block mb-2">Real Estate Startup</span>
                 <h3 className="text-xl font-heading font-bold tracking-tighter text-zinc-50 flex items-center gap-2">
-                  Ubani <span className="text-[9px] font-mono px-1.5 py-0.5 border border-amber-500/30 text-amber-500/80 rounded bg-amber-500/5 normal-case font-normal">Architecture Only</span>
+                  Ubani <span className="text-[9px] font-mono px-1.5 py-0.5 border border-blue-500/30 text-blue-500/80 rounded bg-blue-500/5 normal-case font-normal">Architecture Only</span>
                 </h3>
                 <p className="text-zinc-500 text-[10px] sm:text-xs leading-snug mt-2">
                   Designed and developed the architecture for a comprehensive real estate platform, solidifying advanced state management and React fundamentals.
@@ -434,7 +434,7 @@ export default function Page() {
                 <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">State Management</span>
                 <span className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-[9px] font-mono text-zinc-500 uppercase">System Design</span>
               </div>
-              <span className="text-[10px] font-mono text-zinc-600 uppercase italic">Blueprint</span>
+              <span className="text-[10px] font-mono text-blue-600 uppercase italic">Blueprint</span>
             </div>
           </div>
 
@@ -442,7 +442,7 @@ export default function Page() {
           <div className="lg:col-span-12 lg:row-span-1 group border border-zinc-800 hover:border-zinc-700 bg-zinc-900/20 p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center transition-all duration-300 gap-6">
             <div className="flex-grow max-w-3xl">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest">Hardware / IoT Security</span>
+                <span className="text-[10px] font-mono text-red-500 uppercase tracking-widest">Hardware / IoT Security</span>
                 <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping"></span>
               </div>
               <h3 className="text-2xl font-heading font-bold tracking-tighter mb-2 text-zinc-50">Smart Door Security System</h3>
