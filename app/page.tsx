@@ -375,7 +375,7 @@ export default function Page() {
                 </a>
               </div>
               <h3 className="text-3xl sm:text-4xl font-heading font-bold tracking-tighter mb-2 text-zinc-50">
-                <a href="https://cura-online-pharmacy-system.vercel.app/" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+                <a href="https://cura-online-pharmacy-system.vercel.app/" target="_blank" rel="noreferrer" className="hover:opacity-80 transition-opacity">
                   Cura+
                 </a>
               </h3>
@@ -397,7 +397,7 @@ export default function Page() {
               <div className="max-w-[320px] mb-4 sm:mb-0">
                 <span className="text-[10px] font-mono text-red-500 uppercase tracking-widest block mb-2">AI Real Estate Hub</span>
                 <h3 className="text-xl font-heading font-bold tracking-tighter mb-1 text-zinc-50">
-                  <a href="https://berrylinproperties.com/" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+                  <a href="https://berrylinproperties.com/" target="_blank" rel="noreferrer" className="hover:opacity-80 transition-opacity">
                     AI Property Portal
                   </a>
                 </h3>
@@ -405,8 +405,8 @@ export default function Page() {
                   Engineered a responsive property listing website utilizing React/Next.js. Integrated an AI text-refinement tool to format description summaries with WhatsApp and Email routing.
                 </p>
               </div>
-              <a href="https://berrylinproperties.com/" target="_blank" rel="noreferrer" className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 border border-zinc-800 rounded-full flex items-center justify-center hover:border-emerald-500 hover:bg-emerald-500/10 transition-colors group/link" title="View live property portal">
-                <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-zinc-300 group-hover/link:text-emerald-400 transition-colors" />
+              <a href="https://berrylinproperties.com/" target="_blank" rel="noreferrer" className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 border border-zinc-800 rounded-full flex items-center justify-center hover:border-zinc-600 hover:bg-zinc-900/30 transition-colors group/link" title="View live property portal">
+                <ExternalLink className="w-4 h-4 text-zinc-500 group-hover/link:text-zinc-200 transition-colors" />
               </a>
             </div>
             <div className="flex gap-2 flex-wrap mt-4 sm:mt-0">
