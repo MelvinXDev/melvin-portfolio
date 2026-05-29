@@ -191,6 +191,8 @@ function MobileNav({ isScrolled }: { isScrolled: boolean }) {
 
 export default function Page() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [messageText, setMessageText] = useState("");
+  const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 400);
@@ -299,11 +301,11 @@ export default function Page() {
             className="w-32 h-32 md:w-44 md:h-44 shrink-0 rounded-full overflow-hidden border border-zinc-800 bg-zinc-900/50 relative group shadow-2xl mb-6 md:mb-0"
           >
             <Image
-        src="/melvinpfp.jpg"
-        alt="Melvin"
-        fill
-        className="object-cover grayscale opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-/>
+              src="/melvinpfp.jpg"
+              alt="Melvin"
+              fill
+              className="object-cover grayscale opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+            />
           </motion.div>
 
           <motion.div
@@ -537,7 +539,7 @@ export default function Page() {
       >
         <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-10 pb-4 border-b border-zinc-900 inline-block pr-10">04 // Education</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pl-2">
-          
+
           {/* Lead City University */}
           <div className="border border-zinc-900 bg-zinc-950/30 p-6 rounded-xl relative group hover:border-zinc-800 transition-all">
             <div className="flex justify-between items-start mb-4">
@@ -668,15 +670,84 @@ export default function Page() {
               </a>
             </div>
           </div>
-          <div className="flex w-full md:w-auto relative group">
-            <input
-              type="text"
-              placeholder="Hey Melvin..."
-              className="bg-zinc-950 border border-zinc-800 text-zinc-300 text-sm font-mono px-5 py-3 rounded-l-lg w-full md:w-80 focus:outline-none focus:border-zinc-500 transition-colors placeholder:text-zinc-700"
-            />
-            <button className="bg-zinc-50 text-zinc-950 px-5 py-3 rounded-r-lg hover:bg-zinc-300 transition-colors flex items-center justify-center font-medium">
-              <Send className="w-4 h-4 ml-1" />
-            </button>
+          <div className="w-full md:w-auto relative overflow-hidden min-h-[50px] flex items-center">
+            <AnimatePresence mode="wait">
+              {!showOptions ? (
+                <motion.form
+                  key="input-form"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    if (messageText.trim()) {
+                      setShowOptions(true);
+                    }
+                  }}
+                  className="flex w-full md:w-auto relative group"
+                >
+                  <input
+                    type="text"
+                    value={messageText}
+                    onChange={(e) => setMessageText(e.target.value)}
+                    placeholder="Hey Melvin..."
+                    className="bg-zinc-950 border border-zinc-800 text-zinc-300 text-sm font-mono px-5 py-3 rounded-l-lg w-full md:w-80 focus:outline-none focus:border-zinc-500 transition-colors placeholder:text-zinc-700"
+                  />
+                  <button 
+                    type="submit"
+                    className="bg-zinc-50 text-zinc-950 px-5 py-3 rounded-r-lg hover:bg-zinc-300 transition-colors flex items-center justify-center font-medium"
+                  >
+                    <Send className="w-4 h-4 ml-1" />
+                  </button>
+                </motion.form>
+              ) : (
+                <motion.div
+                  key="options-selector"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex flex-col gap-3 w-full md:w-80 border border-zinc-850 bg-zinc-950 p-4 rounded-xl shadow-2xl relative z-10"
+                >
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 text-center">
+                    Choose how to reach out
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <a
+                      href={`https://wa.me/2348066300182?text=${encodeURIComponent(messageText)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => setShowOptions(false)}
+                      className="flex flex-col items-center justify-center p-3 border border-emerald-900/40 bg-emerald-950/10 hover:bg-emerald-950/30 hover:border-emerald-500 rounded-lg text-zinc-200 transition-all text-center gap-1 group/wa"
+                    >
+                      <span className="text-[10px] font-mono font-bold text-emerald-400 group-hover/wa:scale-105 transition-transform">WhatsApp</span>
+                      <span className="text-[9px] text-zinc-500 font-mono">Pre-fills text</span>
+                    </a>
+                    <a
+                      href="https://discord.com/users/melvinxdev"
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => {
+                        navigator.clipboard.writeText(messageText);
+                        setShowOptions(false);
+                      }}
+                      className="flex flex-col items-center justify-center p-3 border border-indigo-900/40 bg-indigo-950/10 hover:bg-indigo-950/30 hover:border-indigo-500 rounded-lg text-zinc-200 transition-all text-center gap-1 group/dc"
+                      title="Copies message to clipboard and opens Discord"
+                    >
+                      <span className="text-[10px] font-mono font-bold text-indigo-400 group-hover/dc:scale-105 transition-transform">Discord</span>
+                      <span className="text-[9px] text-zinc-500 font-mono">Copies message</span>
+                    </a>
+                  </div>
+                  <button
+                    onClick={() => setShowOptions(false)}
+                    className="text-[9px] font-mono uppercase tracking-widest text-zinc-600 hover:text-zinc-400 transition-colors text-center pt-1 border-t border-zinc-900/50"
+                  >
+                    ← Back to edit
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </motion.div>
